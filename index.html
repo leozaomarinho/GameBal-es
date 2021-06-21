@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Estourando balões</title>
+
+		<script>
+
+			function iniciaJogo() {
+
+			//esta resgatando o valor da dificuldade selecionada	
+			var nivel_jogo = document.getElementById('nivel_jogo').value;
+
+
+			//redireciona para uma nova pagina html
+			window.location.href = 'jogo.html?'+nivel_jogo;
+
+			
+			//alert(nivel_jogo) 
+				
+			}
+
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="estilo.css"> 
+
+	</head>
+
+	<body style="background: url(imagens/baloesfundo.jpg);">
+
+		
+		<div id="nivel_dificuldade" style="align-items: center;">
+			<h1 style="margin-left:470px; color: white; font-size: 36px;">Jogo Estoura Balões</h1>
+			<p style="margin-left: 500px; color: white; font-size: 16px;">Será que você é rapido o suficiente?</p>
+
+				<!--Menu de seleção de dificuldade-->
+				<p style="margin-left: 500px; margin-top:100px; font-size: 24px;">
+					<b style="color: white;">Nivel: </b>
+					<select style="width: 100px; height: 24px;" id="nivel_jogo">
+						<option value="1">Facíl</option>
+						<option value="2">Normal</option>
+						<option value="3">Dificil</option>
+					</select>
+				</p>
+
+			<br>
+			<!--Botão de redirecionamento com função via metodo onclick-->
+			<img id="botao" src="imagens/iniciar.png" onclick="iniciaJogo()"  style="margin-left: 550px; margin-top: 10px;">
+
+		</div>
+
+	</body>
+	
+</html>
